@@ -40,6 +40,18 @@
             <version>1.18.16</version>
         </dependency>
         <!--data-->
+
+        <!--test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--test-->
     </dependencies>
 
     <build>

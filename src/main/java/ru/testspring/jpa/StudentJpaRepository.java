@@ -2,8 +2,8 @@ package ru.testspring.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.testspring.entity.StudentsJpaDemo;
+import ru.testspring.entity.StudentJpa;
 
 @Repository
-public interface StudentsJpaRepository extends JpaRepository<StudentsJpaDemo, Long> {
+public interface StudentJpaRepository extends JpaRepository<StudentJpa, Long> {
 }

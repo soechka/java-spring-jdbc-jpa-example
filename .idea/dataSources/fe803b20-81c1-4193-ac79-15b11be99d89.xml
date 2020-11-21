@@ -789,7 +789,7 @@ false posixrules
     <database id="2" parent="1" name="dev_db">
       <ObjectId>24919</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>989</IntrospectionStateNumber>
+      <IntrospectionStateNumber>996</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24970|24972|1
 sequence|table|24984|24986|1
@@ -854,7 +854,7 @@ sequence|table|24984|24986|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>990</IntrospectionStateNumber>
+      <IntrospectionStateNumber>997</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">
@@ -1039,11 +1039,11 @@ sequence|table|24984|24986|1
       <DefaultExpression>nextval(&apos;faculty_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="46" name="fac_name">
+    <column id="49" parent="46" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>983</StateNumber>
+      <StateNumber>995</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="50" parent="46" name="faculty_pkey">
@@ -1056,7 +1056,7 @@ sequence|table|24984|24986|1
     <index id="51" parent="46" name="faculty_fac_name_key">
       <ObjectId>24995</ObjectId>
       <StateNumber>983</StateNumber>
-      <ColNames>fac_name</ColNames>
+      <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="52" parent="46" name="faculty_pkey">
@@ -1069,7 +1069,7 @@ sequence|table|24984|24986|1
     <key id="53" parent="46" name="faculty_fac_name_key">
       <ObjectId>24996</ObjectId>
       <StateNumber>983</StateNumber>
-      <ColNames>fac_name</ColNames>
+      <ColNames>name</ColNames>
       <UnderlyingIndexName>faculty_fac_name_key</UnderlyingIndexName>
     </key>
     <column id="54" parent="47" name="id">

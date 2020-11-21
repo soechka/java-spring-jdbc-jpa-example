@@ -19,6 +19,11 @@ public class FacultyJpa {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "fac_name", nullable = false)
-    private String fac_name;
+    @Column(name = "name", nullable = false)
+    private String name;
+
+    public FacultyJpa(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.testspring.entity.StudentsJdbcDemo;
 import ru.testspring.jdbc.StudentsJdbcRepository;
-import ru.testspring.entity.StudentsJpaDemo;
-import ru.testspring.jpa.StudentsJpaRepository;
+import ru.testspring.entity.StudentJpa;
+import ru.testspring.jpa.StudentJpaRepository;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import java.util.List;
 public class Controller {
 
     private final StudentsJdbcRepository studentsJdbcRepository;
-    private final StudentsJpaRepository studentsJpaRepository;
+    private final StudentJpaRepository studentJpaRepository;
 
     @Autowired
-    public Controller(StudentsJdbcRepository studentsJdbcRepository, StudentsJpaRepository studentsJpaRepository) {
+    public Controller(StudentsJdbcRepository studentsJdbcRepository, StudentJpaRepository studentJpaRepository) {
         this.studentsJdbcRepository = studentsJdbcRepository;
-        this.studentsJpaRepository = studentsJpaRepository;
+        this.studentJpaRepository = studentJpaRepository;
     }
 
     // JDBC mapping
@@ -40,12 +40,12 @@ public class Controller {
     // JPA mapping
 
     @GetMapping("/students/jpa")
-    public List<StudentsJpaDemo> getStudentsJpa() {
-        return studentsJpaRepository.findAll();
+    public List<StudentJpa> getStudentsJpa() {
+        return studentJpaRepository.findAll();
     }
 
     @PostMapping("/students/jpa")
-    public StudentsJpaDemo addStudentJpa(@RequestBody StudentsJpaDemo studentsJpaDemo) {
-        return studentsJpaRepository.save(studentsJpaDemo);
+    public StudentJpa addStudentJpa(@RequestBody StudentJpa studentJpa) {
+        return studentJpaRepository.save(studentJpa);
     }
 }

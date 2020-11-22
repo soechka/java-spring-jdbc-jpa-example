@@ -1,3 +1,3 @@
-# java-spring-jdbc-jpa-example
+# java-spring-jdbc-jpa-tests-examples
 
-intellekt-a java-spring jdbc jpa lesson
+intellekt-a java-spring

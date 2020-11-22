@@ -15,6 +15,9 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class FacultyJpa {
+
+    public static String TYPE_NAME = "Факультет";
+
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;
@@ -24,6 +27,32 @@ public class FacultyJpa {
 
     public FacultyJpa(Integer id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    //
+
+    public static String getTypeName() {
+        return TYPE_NAME;
+    }
+
+    public static void setTypeName(String typeName) {
+        TYPE_NAME = typeName;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 }

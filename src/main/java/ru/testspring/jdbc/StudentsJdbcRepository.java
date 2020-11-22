@@ -3,7 +3,7 @@ package ru.testspring.jdbc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import ru.testspring.entity.StudentsJdbcDemo;
+import ru.testspring.entities.StudentsJdbcDemo;
 
 import java.util.List;
 
@@ -25,18 +25,18 @@ public class StudentsJdbcRepository {
         return jdbcTemplate.query("SELECT * FROM public.student", (rs, rowNum) ->
                 new StudentsJdbcDemo(
                         rs.getLong("id"),
-                        rs.getInt("fac_id"),
+                        rs.getInt("facId"),
                         rs.getString("name"),
                         rs.getInt("year")
                 ));
     }
 
-    public List<StudentsJdbcDemo> getFacultyStudents(int fac_id) {
-        return jdbcTemplate.query(String.format("SELECT * FROM public.student WHERE fac_id = %s", fac_id),
+    public List<StudentsJdbcDemo> getFacultyStudents(int facId) {
+        return jdbcTemplate.query(String.format("SELECT * FROM public.student WHERE facId = %s", facId),
             (rs, rowNum) ->
                     new StudentsJdbcDemo(
                             rs.getLong("id"),
-                            rs.getInt("fac_id"),
+                            rs.getInt("facId"),
                             rs.getString("name"),
                             rs.getInt("year")
                     ));

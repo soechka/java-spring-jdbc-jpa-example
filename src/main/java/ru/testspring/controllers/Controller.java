@@ -2,9 +2,9 @@ package ru.testspring.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.testspring.entity.StudentsJdbcDemo;
+import ru.testspring.entities.StudentsJdbcDemo;
 import ru.testspring.jdbc.StudentsJdbcRepository;
-import ru.testspring.entity.StudentJpa;
+import ru.testspring.entities.StudentJpa;
 import ru.testspring.jpa.StudentJpaRepository;
 
 import java.util.List;

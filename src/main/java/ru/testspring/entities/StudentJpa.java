@@ -1,4 +1,4 @@
-package ru.testspring.entity;
+package ru.testspring.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,14 +22,21 @@ public class StudentJpa {
     private Integer id;
 
     @OneToOne
-    @JoinColumn(name = "fac_id", referencedColumnName = "id", nullable = false)
-    private FacultyJpa fac_id;
+    @JoinColumn(name = "facId", referencedColumnName = "id")
+    private FacultyJpa facId;
 
     @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "year", nullable = false)
     private Integer year;
+
+    public StudentJpa(Integer id, FacultyJpa facId, String name, Integer year) {
+        this.id = id;
+        this.facId = facId;
+        this.name = name;
+        this.year = year;
+    }
 
     //
 
@@ -49,12 +56,12 @@ public class StudentJpa {
         this.id = id;
     }
 
-    public FacultyJpa getFac_id() {
-        return fac_id;
+    public FacultyJpa getFacId() {
+        return facId;
     }
 
-    public void setFac_id(FacultyJpa fac_id) {
-        this.fac_id = fac_id;
+    public void setFacId(FacultyJpa facId) {
+        this.facId = facId;
     }
 
     public String getName() {

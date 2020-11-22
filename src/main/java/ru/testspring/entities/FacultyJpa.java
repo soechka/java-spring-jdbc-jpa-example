@@ -1,4 +1,4 @@
-package ru.testspring.entity;
+package ru.testspring.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

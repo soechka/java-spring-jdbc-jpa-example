@@ -8,7 +8,7 @@ CREATE TABLE faculty(
 
 CREATE TABLE student(
     id serial PRIMARY KEY,
-    fac_id int NOT NULL,
+    facId int,
     name varchar UNIQUE NOT NULL,
     year int NOT NULL CHECK (year > 0 AND year < 6)
 );

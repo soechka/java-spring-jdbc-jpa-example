@@ -789,10 +789,10 @@ false posixrules
     <database id="2" parent="1" name="dev_db">
       <ObjectId>24919</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>996</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1103</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|24970|24972|1
-sequence|table|24984|24986|1
+      <Relations>sequence|table|25149|25151|1
+sequence|table|25176|25178|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -850,11 +850,10 @@ sequence|table|24984|24986|1
       <Owner>postgres</Owner>
     </schema>
     <schema id="16" parent="2" name="public">
-      <ObjectId>2200</ObjectId>
-      <Comment>standard public schema</Comment>
-      <StateNumber>276</StateNumber>
+      <ObjectId>25094</ObjectId>
+      <StateNumber>1060</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>997</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1104</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">
@@ -1010,32 +1009,32 @@ sequence|table|24984|24986|1
     <language id="42" parent="4" name="plpgsql"/>
     <language id="43" parent="4" name="sql"/>
     <sequence id="44" parent="16" name="faculty_id_seq">
-      <ObjectId>24984</ObjectId>
+      <ObjectId>25149</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>983</StateNumber>
+      <StateNumber>1090</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="45" parent="16" name="student_id_seq">
-      <ObjectId>24970</ObjectId>
+      <ObjectId>25176</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="46" parent="16" name="faculty">
-      <ObjectId>24986</ObjectId>
+      <ObjectId>25151</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>983</StateNumber>
+      <StateNumber>1090</StateNumber>
     </table>
     <table id="47" parent="16" name="student">
-      <ObjectId>24972</ObjectId>
+      <ObjectId>25178</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
     </table>
     <column id="48" parent="46" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>983</StateNumber>
+      <StateNumber>1090</StateNumber>
       <DefaultExpression>nextval(&apos;faculty_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1043,93 +1042,92 @@ sequence|table|24984|24986|1
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>995</StateNumber>
+      <StateNumber>1090</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="50" parent="46" name="faculty_pkey">
-      <ObjectId>24993</ObjectId>
-      <StateNumber>983</StateNumber>
+      <ObjectId>25158</ObjectId>
+      <StateNumber>1090</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="51" parent="46" name="faculty_fac_name_key">
-      <ObjectId>24995</ObjectId>
-      <StateNumber>983</StateNumber>
+    <index id="51" parent="46" name="faculty_name_key">
+      <ObjectId>25160</ObjectId>
+      <StateNumber>1090</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="52" parent="46" name="faculty_pkey">
-      <ObjectId>24994</ObjectId>
-      <StateNumber>983</StateNumber>
+      <ObjectId>25159</ObjectId>
+      <StateNumber>1090</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>faculty_pkey</UnderlyingIndexName>
     </key>
-    <key id="53" parent="46" name="faculty_fac_name_key">
-      <ObjectId>24996</ObjectId>
-      <StateNumber>983</StateNumber>
+    <key id="53" parent="46" name="faculty_name_key">
+      <ObjectId>25161</ObjectId>
+      <StateNumber>1090</StateNumber>
       <ColNames>name</ColNames>
-      <UnderlyingIndexName>faculty_fac_name_key</UnderlyingIndexName>
+      <UnderlyingIndexName>faculty_name_key</UnderlyingIndexName>
     </key>
     <column id="54" parent="47" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
       <DefaultExpression>nextval(&apos;student_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="55" parent="47" name="fac_id">
+    <column id="55" parent="47" name="facid">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="56" parent="47" name="name">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="57" parent="47" name="year">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>979</StateNumber>
+      <StateNumber>1099</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="58" parent="47" name="student_pkey">
-      <ObjectId>24980</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>25186</ObjectId>
+      <StateNumber>1099</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <index id="59" parent="47" name="student_name_key">
-      <ObjectId>24982</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>25188</ObjectId>
+      <StateNumber>1099</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="60" parent="47" name="student_pkey">
-      <ObjectId>24981</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>25187</ObjectId>
+      <StateNumber>1099</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>student_pkey</UnderlyingIndexName>
     </key>
     <key id="61" parent="47" name="student_name_key">
-      <ObjectId>24983</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>25189</ObjectId>
+      <StateNumber>1099</StateNumber>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>student_name_key</UnderlyingIndexName>
     </key>
     <check id="62" parent="47" name="student_year_check">
-      <ObjectId>24976</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>25182</ObjectId>
+      <StateNumber>1099</StateNumber>
       <ColNames>year</ColNames>
       <Predicate>(year &gt; 0) AND (year &lt; 6)</Predicate>
     </check>

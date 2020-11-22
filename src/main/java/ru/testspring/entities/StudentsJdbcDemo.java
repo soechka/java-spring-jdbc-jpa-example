@@ -1,4 +1,4 @@
-package ru.testspring.entity;
+package ru.testspring.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,15 +9,15 @@ public class StudentsJdbcDemo {
 
     private long id;
 
-    private int fac_id;
+    private int facId;
 
     private String name;
 
     private int year;
 
-    public StudentsJdbcDemo(long id, int fac_id, String name, int year) {
+    public StudentsJdbcDemo(long id, int facId, String name, int year) {
         this.id = id;
-        this.fac_id = fac_id;
+        this.facId = facId;
         this.name = name;
         this.year = year;
     }
